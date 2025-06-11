@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Fitness Glove Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1> Smart Fitness Glove Dashboard</h1>
+  <p>Real-Time Feedback That Blows Minds</p>
+</header>
+
+<main>
+  <section class="control-panel">
+    <label for="workout">Choose Your Workout:</label>
+    <select id="workout">
+      <option>Push-Up</option>
+      <option>Deadlift</option>
+      <option>Squat</option>
+      <option>Plank</option>
+      <option>Powerlifting</option>
+    </select>
+    <button id="setStandard">Set Standard</button>
+    <button id="toggleSession">Start Real-Time Session</button>
+  </section>
+
+  <section class="feedback-meters">
+    <div class="meter-card">
+      <h2>Flex Feedback</h2>
+      <div class="circle" id="flexCircle"><span id="flexValue">--</span> m</div>
+    </div>
+    <div class="meter-card">
+      <h2>Pressure Feedback</h2>
+      <div class="circle" id="pressureCircle"><span id="pressureValue">--</span> m</div>
+    </div>
+    <div class="meter-card">
+      <h2>Motion Feedback</h2>
+      <div class="circle" id="motionCircle"><span id="motionValue">--</span> m/s²</div>
+    </div>
+  </section>
+
+  <section class="realtime-section hidden" id="realtimePanel">
+    <h2>Real-Time Full Sensor Metrics</h2>
+    <div class="meter-grid">
+      <div><label>Flex 1</label><meter id="f1m" min="0" max="1000"></meter><span id="f1">--</span></div>
+      <div><label>Flex 2</label><meter id="f2m" min="0" max="1000"></meter><span id="f2">--</span></div>
+      <div><label>Pressure</label><meter id="pm" min="0" max="1000"></meter><span id="p">--</span></div>
+      <div><label>Gyro X</label><meter id="gxm" min="-180" max="180"></meter><span id="gx">--</span></div>
+      <div><label>Gyro Y</label><meter id="gym" min="-180" max="180"></meter><span id="gy">--</span></div>
+      <div><label>Gyro Z</label><meter id="gzm" min="-180" max="180"></meter><span id="gz">--</span></div>
+      <div><label>Accel X</label><meter id="axm" min="-20" max="20"></meter><span id="ax">--</span></div>
+      <div><label>Accel Y</label><meter id="aym" min="-20" max="20"></meter><span id="ay">--</span></div>
+      <div><label>Accel Z</label><meter id="azm" min="-20" max="20"></meter><span id="az">--</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>E&T Department • 2025</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
